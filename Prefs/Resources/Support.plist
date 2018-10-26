@@ -1,0 +1,91 @@
+<?xml version=1.0 encoding=UTF-8?>
+<!DOCTYPE plist PUBLIC -//Apple//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd>
+<plist version=1.0>
+	<dict>
+		<key>items</key>
+		<array>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>cellClass</key>
+				<string>CSPDeveloperCell</string>
+				<key>action</key>
+				<string>openInBrowser:</string>
+				<key>username</key>
+				<string>iospeterdev</string>
+				<key>provider</key>
+				<string>1</string>
+				<key>height</key>
+				<string>81</string>
+				<key>devName</key>
+				<string>PeterDev</string>
+				<key>devTitle</key>
+				<string>Soongyu Kwon</string>
+				<key>devSubtitle</key>
+				<string>Developer &amp; Designer</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>SUPPORT</string>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>openInBrowser:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>url</key>
+				<string>https://github.com/PeterDev/PowerGuard/issues</string>
+				<key>label</key>
+				<string>REPORT_A_BUG</string>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>email:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>mailto</key>
+				<string>mailto:djperter@icloud.com?subject=Power%20Guard%20v1.0</string>
+				<key>label</key>
+				<string>EMAIL_SUPPORT</string>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>copyTweakList</string>
+				<key>cell</key>
+				<string>PSButtonCell</string>
+				<key>label</key>
+				<string>COPY_TWEAK_LIST</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+				<key>label</key>
+				<string>DONATE</string>
+			</dict>
+
+			<dict>
+				<key>action</key>
+				<string>openInBrowser:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>url</key>
+				<string>https://paypal.me/peterdevkr</string>
+				<key>icon</key>
+				<string/>
+				<key>label</key>
+				<string>MAKE_A_DONATION_TO_PETERDEV</string>
+			</dict>
+
+		</array>
+		<key>title</key>
+		<string>SUPPORT</string>
+	</dict>
+</plist>

@@ -1,0 +1,11 @@
+{
+    "FEATURES" = "Features";
+    "ENABLE" = "Enable";
+    "SILENT_TO_LOCK" = "Silent to Lock";
+    "TOGGLE_WITH_SILENT_MODE" = "Toggle with silent mode";
+    "PROTECT_WITH_BIO" = "Protect with Touch/Face ID";
+    "ONLY_SUPPORT_BIO" = "Only support the devices which Touch/Face ID Enabled";
+    "SUPPORT" = "Support";
+    "BACKUP_AND_RESTORE" = "Backup & Restore";
+    "CHANGELOG" = "ChangeLog";
+}
