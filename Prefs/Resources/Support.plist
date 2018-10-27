@@ -39,7 +39,7 @@
 				<key>cell</key>
 				<string>PSLinkCell</string>
 				<key>url</key>
-				<string>https://github.com/PeterDev/PowerGuard/issues</string>
+				<string>https://github.com/peterprd/PowerGuard/issues</string>
 				<key>label</key>
 				<string>REPORT_A_BUG</string>
 			</dict>

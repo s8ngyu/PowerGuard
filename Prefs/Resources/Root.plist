@@ -4,6 +4,26 @@
 	<dict>
 		<key>items</key>
 		<array>
+
+			<dict>
+				<key>cell</key>
+				<string>PSTableCell</string>
+				<key>cellClass</key>
+				<string>CSPImageCell</string>
+				<key>height</key>
+				<string>160</string>
+				<key>static</key>
+				<true/>
+				<key>key</key>
+				<string>selectPhotos</string>
+				<key>storePath</key>
+				<string>/Library/PreferenceBundles/PowerGuardPrefs.bundle/PowerGuardBanner@3x.png</string>
+				<key>defaults</key>
+				<string>com.peterdev.powerguard</string>
+				<key>defaultsPath</key>
+				<string>/Library/PreferenceBundles/PowerGuardPrefs.bundle</string>
+			</dict>
+
 		    <!--Features-->
 			<dict>
 				<key>cell</key>
@@ -106,15 +126,20 @@
 				<key>changes</key>
 				<array>
 					<dict>
-						<key>Version 0.0.1</key>
+						<key>Version 1.0</key>
 						<array>
-							<string>Beta Testing.</string>
+							<string>Release</string>
+							<string>Special Thanks to:</string>
+							<string>rudi</string>
+							<string>smokin1337</string>
+							<string>Muirey</string>
+							<string>PINPAL</string>
 						</array>
 					</dict>
 				</array>
 			</dict>
 		</array>
 		<key>title</key>
-		<string>Power Guard</string>
+		<string>PowerGuard</string>
 	</dict>
 </plist>

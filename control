@@ -1,9 +1,11 @@
 Package: com.peterdev.powerguard
-Name: Power Guard
-Depends: mobilesubstrate
+Name: PowerGuard
+Depends: mobilesubstrate, com.creaturecoding.libcspreferences
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Prevent someone from turning off your iOS device.
 Maintainer: PeterDev <djperter@icloud.com>
 Author: PeterDev <djperter@icloud.com>
 Section: Tweaks
+Depiction: https://nexusrepo.kro.kr/depiction/com.peterdev.powerguard/
+Icon: https://nexusrepo.kro.kr/depiction/icons/powerguard.png

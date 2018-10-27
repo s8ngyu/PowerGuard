@@ -18,12 +18,12 @@ static BOOL kBioProtect = NO;               //Touch/Face ID
   if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.peterdev.powerguard.list"])
 {
     %orig;
-    NSLog(@"[Power Guard] Official detected");
+    NSLog(@"[PowerGuard] Official detected");
 }
 else
 {
-    NSLog(@"[Power Guard] Unofficial detected.");
-      UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"Power Guard" message:@"You're using Unofficial copy of Power Guard, Use the Official version" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+    NSLog(@"[PowerGuard] Unofficial detected.");
+      UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"You're using Unofficial copy of PowerGuard, Use the Official version" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
 
       [drmalert show];
 }
@@ -32,27 +32,31 @@ else
 
 %hook SBPowerDownController                                  //Main Code
 -(void)orderFront {
-UIAlertView *ProtectAlert = [[UIAlertView alloc]initWithTitle:@"Power Guard" message:@"This device is protecting with Power Guard." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-UIAlertView *BioAlert = [[UIAlertView alloc]initWithTitle:@"Power Guard" message:@"Touch/Face ID is not enabled on your device." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+UIAlertView *ProtectAlert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"This device is protecting with PowerGuard." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+UIAlertView *BioAlert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"Touch/Face ID is not enabled on your device." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+LAContext *context = [[LAContext alloc] init];
+NSError *error;
+
 
 if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.peterdev.powerguard.list"]) {
   if(kEnable && kSilentToggle) {
     if(kBioProtect){
       if ([[objc_getClass("SBMediaController") sharedInstance] isRingerMuted] == YES) {
-        LAContext *context = [[LAContext alloc] init];
-        NSError *error;
         if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]){
-          [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Power Guard" reply:^(BOOL success, NSError *error){
+          [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
           if(success){
-            %orig;            //This cause respring.
-            NSLog(@"[Power Guard] Bio Protect Mode, showed PowerDownController");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+              %orig;
+              NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
+            });
+            NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
           } else {
-            NSLog(@"[Power Guard] Bio Protect Mode, Locked");
+            NSLog(@"[PowerGuard] Bio Protect Mode, Locked");
           }
           }];
         } else {
           [BioAlert show];
-          NSLog(@"[Power Guard] Bio Protect Mode, Touch/Face ID is not enabled.");
+          NSLog(@"[PowerGuard] Bio Protect Mode, Touch/Face ID is not enabled");
         }
       } else {
         %orig;
@@ -60,25 +64,45 @@ if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.pe
     } else {
       if ([[objc_getClass("SBMediaController") sharedInstance] isRingerMuted] == YES) {
         [ProtectAlert show];
-        NSLog(@"[Power Guard] Silent Mode, showed Alert");
+        NSLog(@"[PowerGuard] Silent Mode, showed Alert");
       } else {
         %orig;
       }
     }
   } else {
     if(kEnable) {
-          [ProtectAlert show];
-          NSLog(@"[Power Guard] Normal Mode, Showed Alert");
+      if(kBioProtect) {
+        if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]){
+          [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
+          if(success){
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+              %orig;
+              NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
+            });
+            NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
+          } else {
+            NSLog(@"[PowerGuard] Bio Protect Mode, Locked");
+          }
+          }];
+        } else {
+          [BioAlert show];
+          NSLog(@"[PowerGuard] Bio Protect Mode, Touch/Face ID is not enabled");
+        }
+      } else {
+        [ProtectAlert show];
+        NSLog(@"[PowerGuard] Normal Mode, showed Alert");
+      }
     } else {
       %orig;
     }
-  }
+}
 } else {
   %orig;
-  NSLog(@"[Power Guard] Unofficial detected.");
+  NSLog(@"[PowerGuard] Unofficial detected.");
 }
 }
 %end
+
 
 static void loadPrefs()
 {

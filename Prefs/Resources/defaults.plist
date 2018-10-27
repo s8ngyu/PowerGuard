@@ -6,5 +6,7 @@
 		<false/>
 		<key>kSilentToggle</key>
 		<false/>
+		<key>kBioProtect</key>
+		<false/>
 	</dict>
 </plist>

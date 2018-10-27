@@ -11,15 +11,11 @@
 			<key>detail</key>
 			<string>CSPListController</string>
 			<key>icon</key>
-			<string>icon.png</string>
+			<string>icon@2x.png</string>
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Power Guard</string>
-			<key>headerString</key>
-			<string>Power Guard BETA\nby: PeterDev</string>
-			<key>headerFont</key>
-			<string>.SFUIDisplay-Regular</string>
+			<string>PowerGuard</string>
 			<key>primaryFontSize</key>
 			<real>36</real>
 			<key>secondaryFontSize</key>
