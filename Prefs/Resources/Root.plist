@@ -11,7 +11,7 @@
 				<key>cellClass</key>
 				<string>CSPImageCell</string>
 				<key>height</key>
-				<string>160</string>
+				<string>220</string>
 				<key>static</key>
 				<true/>
 				<key>key</key>
@@ -113,30 +113,6 @@
 				<string>com.peterdev.powerguard.prefschanged</string>
 				<key>label</key>
 				<string>BACKUP_AND_RESTORE</string>
-			</dict>
-			<dict>
-				<key>cell</key>
-				<string>PSLinkCell</string>
-				<key>detail</key>
-				<string>CSPChangeLogController</string>
-				<key>isController</key>
-				<true/>
-				<key>label</key>
-				<string>CHANGELOG</string>
-				<key>changes</key>
-				<array>
-					<dict>
-						<key>Version 1.0</key>
-						<array>
-							<string>Release</string>
-							<string>Special Thanks to:</string>
-							<string>rudi</string>
-							<string>smokin1337</string>
-							<string>Muirey</string>
-							<string>PINPAL</string>
-						</array>
-					</dict>
-				</array>
 			</dict>
 		</array>
 		<key>title</key>

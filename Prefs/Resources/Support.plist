@@ -23,7 +23,28 @@
 				<key>devTitle</key>
 				<string>Soongyu Kwon</string>
 				<key>devSubtitle</key>
-				<string>Developer &amp; Designer</string>
+				<string>Developer</string>
+			</dict>
+
+			<dict>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>cellClass</key>
+				<string>CSPDeveloperCell</string>
+				<key>action</key>
+				<string>openInBrowser:</string>
+				<key>username</key>
+				<string>TPinpal</string>
+				<key>provider</key>
+				<string>1</string>
+				<key>height</key>
+				<string>81</string>
+				<key>devName</key>
+				<string>PINPAL</string>
+				<key>devTitle</key>
+				<string>PINPAL</string>
+				<key>devSubtitle</key>
+				<string>Designer</string>
 			</dict>
 
 			<dict>
@@ -38,6 +59,8 @@
 				<string>openInBrowser:</string>
 				<key>cell</key>
 				<string>PSLinkCell</string>
+				<key>icon</key>
+				<string>bug@2x.png</string>
 				<key>url</key>
 				<string>https://github.com/peterprd/PowerGuard/issues</string>
 				<key>label</key>
@@ -46,9 +69,24 @@
 
 			<dict>
 				<key>action</key>
+				<string>openInBrowser:</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>icon</key>
+				<string>github@2x.png</string>
+				<key>url</key>
+				<string>https://github.com/peterprd/PowerGuard/</string>
+				<key>label</key>
+				<string>SOURCE_CODE</string>
+			</dict>
+
+			<dict>
+				<key>action</key>
 				<string>email:</string>
 				<key>cell</key>
 				<string>PSLinkCell</string>
+				<key>icon</key>
+				<string>email@2x.png</string>
 				<key>mailto</key>
 				<string>mailto:djperter@icloud.com?subject=Power%20Guard%20v1.0</string>
 				<key>label</key>
@@ -60,6 +98,8 @@
 				<string>copyTweakList</string>
 				<key>cell</key>
 				<string>PSButtonCell</string>
+				<key>icon</key>
+				<string>copy@2x.png</string>
 				<key>label</key>
 				<string>COPY_TWEAK_LIST</string>
 			</dict>
@@ -79,7 +119,7 @@
 				<key>url</key>
 				<string>https://paypal.me/peterdevkr</string>
 				<key>icon</key>
-				<string/>
+				<string>paypal@2x.png</string>
 				<key>label</key>
 				<string>MAKE_A_DONATION_TO_PETERDEV</string>
 			</dict>

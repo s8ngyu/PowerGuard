@@ -3,9 +3,8 @@
     "ENABLE" = "활성화";
     "SILENT_TO_LOCK" = "무음모드로 보호";
     "TOGGLE_WITH_SILENT_MODE" = "무음모드를 사용하여 제어합니다";
-    "PROTECT_WITH_BIO" = "Touch/Face ID로 보호";
-    "ONLY_SUPPORT_BIO" = "Touch/Face ID가 활성화 되어있는 기기들만 지원합니다";
+    "PROTECT_WITH_BIO" = "Touch ID로 보호";
+    "ONLY_SUPPORT_BIO" = "Touch ID가 활성화 되어있는 기기들만 지원합니다";
     "SUPPORT" = "지원";
     "BACKUP_AND_RESTORE" = "백업과 복원";
-    "CHANGELOG" = "변경사항";
 }

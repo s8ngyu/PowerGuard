@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = PowerGuardPrefs
-PowerGuardPrefs_FILES = $(wildcard *.m)
+PowerGuardPrefs_FILES = PWGPreferenceController.m
 PowerGuardPrefs_INSTALL_PATH = /Library/PreferenceBundles
 PowerGuardPrefs_FRAMEWORKS = UIKit
 PowerGuardPrefs_PRIVATE_FRAMEWORKS = Preferences

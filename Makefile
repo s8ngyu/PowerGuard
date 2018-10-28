@@ -5,7 +5,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = PowerGuard
 PowerGuard_FILES = Tweak.xm
 PowerGuard_FRAMEWORKS = UIKit
-PowerGuard_LDFLAGS += -lCSPreferencesProvider
+PowerGuard_LDFLAGS +=  -lCSPreferencesProvider
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
