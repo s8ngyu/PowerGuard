@@ -32,7 +32,7 @@ else
 
 %hook SBPowerDownController                                  //Main Code
 -(void)orderFront {
-UIAlertView *ProtectAlert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"This device is protecting with PowerGuard." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+UIAlertView *ProtectAlert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"This device is protected with PowerGuard." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
 UIAlertView *BioAlert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"Touch ID is not enabled on your device." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil];
 LAContext *context = [[LAContext alloc] init];
 NSError *error;
