@@ -47,6 +47,50 @@
 			</dict>
 			<dict>
 				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>detail</key>
+				<string>PSDetailController</string>
+				<key>key</key>
+				<string>kProtectMenu</string>
+				<key>label</key>
+				<string>PROTECT_THE_MENU</string>
+				<key>sublabel</key>
+				<string>PROTECT_THE_POWER_DOWN_MENU</string>
+				<key>placeholder</key>
+				<string>placeholder</string>
+				<key>PostNotification</key>
+				<string>com.peterdev.powerguard.prefschanged</string>
+				<key>defaults</key>
+				<string>com.peterdev.powerguard</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>detail</key>
+				<string>PSDetailController</string>
+				<key>key</key>
+				<string>kProtectSlider</string>
+				<key>label</key>
+				<string>PROTECT_THE_SLIDER</string>
+				<key>sublabel</key>
+				<string>PROTECT_SLIDER_IN_THE_MENU</string>
+				<key>placeholder</key>
+				<string>placeholder</string>
+				<key>PostNotification</key>
+				<string>com.peterdev.powerguard.prefschanged</string>
+				<key>defaults</key>
+				<string>com.peterdev.powerguard</string>
+			</dict>
+			<dict>
+				<key>cell</key>
+				<string>PSGroupCell</string>
+			</dict>
+			<dict>
+				<key>cell</key>
 				<string>PSSwitchCell</string>
 				<key>detail</key>
 				<string>PSDetailController</string>
