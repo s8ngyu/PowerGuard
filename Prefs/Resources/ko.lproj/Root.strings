@@ -1,10 +1,14 @@
 {
     "FEATURES" = "기능";
     "ENABLE" = "활성화";
+    "PROTECT_THE_MENU" = "메뉴 보호";
+    "PROTECT_THE_POWER_DOWN_MENU" = "전원 종료 메뉴를 보호합니다";
+    "PROTECT_THE_SLIDER" = "슬라이더 보호";
+    "PROTECT_SLIDER_IN_THE_MENU" = '"밀어서 전원 끄기" 슬라이더를 보호합니다';
     "SILENT_TO_LOCK" = "무음모드로 보호";
     "TOGGLE_WITH_SILENT_MODE" = "무음모드를 사용하여 제어합니다";
-    "PROTECT_WITH_BIO" = "Touch ID로 보호";
-    "ONLY_SUPPORT_BIO" = "Touch ID가 활성화 되어있는 기기들만 지원합니다";
+    "PROTECT_WITH_BIO" = "비밀번호/Touch ID로 보호";
+    "ONLY_SUPPORT_BIO" = "비밀번호 또는 Touch ID를 먼저 활성화 하세요";
     "SUPPORT" = "지원";
     "BACKUP_AND_RESTORE" = "백업과 복원";
 }
