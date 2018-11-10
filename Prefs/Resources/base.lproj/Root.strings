@@ -1,10 +1,14 @@
 {
     "FEATURES" = "Features";
     "ENABLE" = "Enable";
+    "PROTECT_THE_MENU" = "Protect the menu";
+    "PROTECT_THE_POWER_DOWN_MENU" = "Protect the power down menu";
+    "PROTECT_THE_SLIDER" = "Protect the slider";
+    "PROTECT_SLIDER_IN_THE_MENU" = 'Protect the "slide to shutdown"';
     "SILENT_TO_LOCK" = "Silent to Lock";
     "TOGGLE_WITH_SILENT_MODE" = "Toggle with silent mode";
-    "PROTECT_WITH_BIO" = "Protect with Touch ID";
-    "ONLY_SUPPORT_BIO" = "Only support the devices which Touch ID is enabled";
+    "PROTECT_WITH_BIO" = "Protect with Passcode/Touch ID";
+    "ONLY_SUPPORT_BIO" = "Setup Passcode or Touch ID before enable this";
     "SUPPORT" = "Support";
     "BACKUP_AND_RESTORE" = "Backup & Restore";
 }
