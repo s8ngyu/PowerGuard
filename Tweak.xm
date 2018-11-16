@@ -54,7 +54,6 @@ else
 {
     NSLog(@"[PowerGuard] Unofficial detected.");
       UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"You're using Unofficial copy of PowerGuard, Use the Official version" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-
       [drmalert show];
 }
 }
@@ -151,7 +150,7 @@ NSError *error;
               [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
               if(success){
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                  %orig;
+                  [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
                   NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
                 });
                 NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
@@ -162,17 +161,19 @@ NSError *error;
               }];
             } else {
               [BioAlert show];
+              [self _cancelButtonTapped]; 
               NSLog(@"[PowerGuard] Bio Protect Mode, Touch/Face ID is not enabled");
             }
           } else {
-            %orig;
+            [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
           }
         } else {
           if ([[objc_getClass("SBMediaController") sharedInstance] isRingerMuted] == YES) {
+            [self _cancelButtonTapped]; 
             [ProtectAlert show];
             NSLog(@"[PowerGuard] Silent Mode, showed Alert");
           } else {
-            %orig;
+            [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
           }
         }
       } else {
@@ -182,29 +183,32 @@ NSError *error;
               [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
               if(success){
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                  %orig;
+                  [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
                   NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
                 });
                 NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
               } else {
+                [self _cancelButtonTapped]; 
                 NSLog(@"[PowerGuard] Bio Protect Mode, Locked");
               }
               }];
             } else {
+              [self _cancelButtonTapped]; 
               [BioAlert show];
               NSLog(@"[PowerGuard] Bio Protect Mode, Touch/Face ID is not enabled");
             }
           } else {
+            [self _cancelButtonTapped]; 
             [ProtectAlert show];
             NSLog(@"[PowerGuard] Normal Mode, showed Alert");
           }
         } else {
-          %orig;
+          [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
         }
       }
     }
   } else {
-    %orig;
+    [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
     NSLog(@"[PowerGuard] Unofficial detected.");
   }
 }
