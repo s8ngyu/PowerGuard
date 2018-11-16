@@ -150,7 +150,7 @@ NSError *error;
               [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
               if(success){
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                  [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+                  %orig;
                   NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
                 });
                 NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
@@ -165,7 +165,7 @@ NSError *error;
               NSLog(@"[PowerGuard] Bio Protect Mode, Touch/Face ID is not enabled");
             }
           } else {
-            [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+            %orig;
           }
         } else {
           if ([[objc_getClass("SBMediaController") sharedInstance] isRingerMuted] == YES) {
@@ -173,7 +173,7 @@ NSError *error;
             [ProtectAlert show];
             NSLog(@"[PowerGuard] Silent Mode, showed Alert");
           } else {
-            [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+            %orig;
           }
         }
       } else {
@@ -183,7 +183,7 @@ NSError *error;
               [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
               if(success){
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                  [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+                  %orig;
                   NSLog(@"[PowerGuard] Bio Protect Mode, PowerDownController showed");
                 });
                 NSLog(@"[PowerGuard] Bio Protect Mode, 0.1sec timer started");
@@ -203,12 +203,12 @@ NSError *error;
             NSLog(@"[PowerGuard] Normal Mode, showed Alert");
           }
         } else {
-          [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+          %orig;
         }
       }
     }
   } else {
-    [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
+    %orig;
     NSLog(@"[PowerGuard] Unofficial detected.");
   }
 }
