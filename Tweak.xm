@@ -101,8 +101,8 @@ if ([[NSFileManager defaultManager] fileExistsAtPath:@"/var/lib/dpkg/info/com.pe
   } else {
     if(kEnable && kProtectMenu) {
       if(kBioProtect) {
-        if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]){
-          [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
+        if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error]){
+          [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
           if(success){
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
               %orig;
@@ -179,8 +179,8 @@ NSError *error;
       } else {
         if(kEnable && kProtectSlider) {
           if(kBioProtect) {
-            if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]){
-              [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
+            if([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error]){
+              [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"PowerGuard" reply:^(BOOL success, NSError *error){
               if(success){
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                   [[%c(FBSystemService) sharedInstance] shutdownAndReboot:NO];
