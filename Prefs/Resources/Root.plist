@@ -60,8 +60,6 @@
 				<string>PROTECT_THE_MENU</string>
 				<key>sublabel</key>
 				<string>PROTECT_THE_POWER_DOWN_MENU</string>
-				<key>placeholder</key>
-				<string>placeholder</string>
 				<key>PostNotification</key>
 				<string>com.peterdev.powerguard.prefschanged</string>
 				<key>defaults</key>
@@ -78,8 +76,6 @@
 				<string>PROTECT_THE_SLIDER</string>
 				<key>sublabel</key>
 				<string>PROTECT_SLIDER_IN_THE_MENU</string>
-				<key>placeholder</key>
-				<string>placeholder</string>
 				<key>PostNotification</key>
 				<string>com.peterdev.powerguard.prefschanged</string>
 				<key>defaults</key>
@@ -100,8 +96,6 @@
 				<string>SILENT_TO_LOCK</string>
 				<key>sublabel</key>
 				<string>TOGGLE_WITH_SILENT_MODE</string>
-				<key>placeholder</key>
-				<string>placeholder</string>
 				<key>PostNotification</key>
 				<string>com.peterdev.powerguard.prefschanged</string>
 				<key>defaults</key>
@@ -118,8 +112,6 @@
 				<string>PROTECT_WITH_BIO</string>
 				<key>sublabel</key>
 				<string>ONLY_SUPPORT_BIO</string>
-				<key>placeholder</key>
-				<string>placeholder</string>
 				<key>PostNotification</key>
 				<string>com.peterdev.powerguard.prefschanged</string>
 				<key>defaults</key>
