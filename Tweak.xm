@@ -18,7 +18,7 @@ static BOOL kProtectSlider = NO;            //Protect Slider
         -(void)setRingerMuted:(BOOL)arg1;
     @end
 
-        @interface FBSystemService : NSObject
+    @interface FBSystemService : NSObject
     +(id)sharedInstance;
     -(void)shutdownAndReboot:(BOOL)arg1;
     -(void)exitAndRelaunch:(BOOL)arg1;
