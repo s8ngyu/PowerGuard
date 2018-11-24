@@ -1,9 +1,17 @@
 # PowerGuard
+iOS Tweak to prevent someone from turning off your device.
 
-Power Down Menu Protection  
-  
-Only tested on iOS 11.3.1 and 12.1
+## Features
+* Protect Power Down Menu
+* Protect Power Down Slider
+* Protect with Passcode
+* Protect with Touch ID
+* Protect with Face ID
+* Turn on / off protecting with Silent toggle
 
-This is made for prevent someone from turning off your device.  
+## Change log
+* Version 2.0.2
+  * Fixed respring issue
   
-Get the ```.deb``` at the release tab.  
+* Version 2.0.1
+  * Fixed passcode issue
