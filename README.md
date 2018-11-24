@@ -10,7 +10,7 @@ iOS Tweak to prevent someone from turning off your device.
 * Turn on / off protecting with Silent toggle
 
 ## Change log
-* Version 2.0.2 *Files not available yet*
+* Version 2.0.2 [deb](https://github.com/peterprd/PowerGuard/releases/download/2.0.2/com.peterdev.powerguard_2.0.2_iphoneos-arm.deb)
   * Fixed respring issue
   
 * Version 2.0.1 [deb](https://github.com/peterprd/PowerGuard/releases/download/2.0.1/com.peterdev.powerguard_2.0.1_iphoneos-arm.deb)
@@ -30,7 +30,7 @@ iOS Tweak to prevent someone from turning off your device.
 
 ## How to Download
 > ### Download
-> Add [Nexus Repository](https://nexusrepo.kro.kr) to Cydia or Sileo
+> Add [Nexus Repository](https://nexusrepo.kro.kr) to Cydia or Sileo  
 > Download ```.deb``` files and ```source code``` at [Release](https://github.com/peterprd/PowerGuard/releases) tab
 
 ## TODO
@@ -51,3 +51,6 @@ Welcome all contributors. You can fork this project and pull requests. I will me
 > 
 > ### Designer
 > PINPAL
+
+## License
+MIT License | Please contact me on Twitter or e-mail(look my github bio) before release some tweaks based on PowerGuard
