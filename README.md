@@ -34,7 +34,7 @@ iOS Tweak to prevent someone from turning off your device.
 > Download ```.deb``` files and ```source code``` at [Release](https://github.com/peterprd/PowerGuard/releases) tab
 
 ## TODO
-* Show battery level of device and bluetooth device
+* Show battery level of device and bluetooth device on the alert (Optional) (WIP)
 * Support iPhone X and above
 * Fake Shutdown
 * Fake Hard reset
