@@ -8,4 +8,4 @@ Maintainer: PeterDev <djperter@icloud.com>
 Author: PeterDev <djperter@icloud.com>
 Section: Tweaks
 Depiction: https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/
-Icon: file:///Library/PreferenceBundles/PowerGuardPrefs.bundle/icon@3x.png
+Icon: https://nexusrepo.kro.kr/depictions/com.peterdev.powerguard/screenshots/icon.png
