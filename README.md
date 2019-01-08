@@ -30,8 +30,13 @@ iOS Tweak to prevent someone from turning off your device.
 
 ## How to Download
 > ### Download
-> Add [Nexus Repository](https://nexusrepo.kro.kr) to Cydia or Sileo  
-> Download ```.deb``` files and ```source code``` at [Release](https://github.com/peterprd/PowerGuard/releases) tab
+> Add [Nexus Repository](https://nexusrepo.kro.kr) to Cydia or Sileo.  
+> Download ```.deb``` files and ```source code``` at [Release](https://github.com/peterprd/PowerGuard/releases) tab.
+
+> ### Compile
+> [Download](https://github.com/peterprd/PowerGuard/archive/master.zip) this repository.  
+> ```make package``` to make debian package of PowerGuard.  
+> ```make package install``` to make package and install it via SSH.
 
 ## TODO
 * Show battery level of device and bluetooth device on the alert (Optional) (WIP)
