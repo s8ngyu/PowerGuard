@@ -53,8 +53,9 @@ static BOOL kProtectSlider = NO;            //Protect Slider
 else
 {
     NSLog(@"[PowerGuard] Unofficial detected.");
-      UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"You're using Unofficial copy of PowerGuard, Use the Official version" delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
-      [drmalert show];
+    %orig;
+    UIAlertView *drmalert = [[UIAlertView alloc]initWithTitle:@"PowerGuard" message:@"You're using Unofficial copy of PowerGuard, Use the Official version" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    [drmalert show];
 }
 }
 %end
